@@ -7,12 +7,12 @@ public class Cubiquity : ModuleRules
 {
     private string ModulePath
     {
-        get { return Path.GetDirectoryName(RulesCompiler.GetModuleFilename(this.GetType().Name)); }
+        get { return Path.GetDirectoryName(ModuleDirectory); }
     }
 
     private string ThirdPartyPath
     {
-        get { return Path.GetFullPath("C:/Program Files/Cubiquity-2015-06-14"); } //Edit this line to match where Cubiquity is installed
+        get { return Path.GetFullPath("D:\\projects\\cubiquity\\CubiquityC"); } //Edit this line to match where Cubiquity is installed
     }
 
     private string ThirdPartyLibraryPath
