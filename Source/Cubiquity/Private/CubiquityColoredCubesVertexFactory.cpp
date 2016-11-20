@@ -61,7 +61,7 @@ void FColoredCubesVertexFactory::InitRHI()
 
 	check(Streams.Num() > 0);
 
-	InitDeclaration(Elements, Data);
+	InitDeclaration(Elements/*, Data*/);
 
 	check(IsValidRef(GetDeclaration()));
 }

@@ -19,7 +19,7 @@ struct FColoredCubesVertex
 
 	FColoredCubesVertex(const FDynamicMeshVertex& other) :
 		Position(other.Position),
-		Color(other.Position)
+		Color(other.Color)
 	{}
 
 	FVector Position;
@@ -84,7 +84,7 @@ public:
 	FColoredCubesVertexFactory()
 	{}
 
-	struct DataType : public FVertexFactory::DataType
+	struct DataType //: public FVertexFactory::DataType
 	{
 		FVertexStreamComponent PositionComponent;
 		FVertexStreamComponent ColorComponent;

@@ -5,6 +5,7 @@
 #include "CubiquityMeshComponent.h"
 #include "CubiquityTerrainVolume.h"
 #include "CubiquityColoredCubesVolume.h"
+#include "PhysicsEngine/BodySetup.h"
 
 UCubiquityMeshComponent::UCubiquityMeshComponent(const FObjectInitializer& PCIP)
 	: Super(PCIP)
