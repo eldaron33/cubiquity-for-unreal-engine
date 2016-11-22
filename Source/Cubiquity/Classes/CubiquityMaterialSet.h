@@ -13,7 +13,7 @@ class UCubiquityMaterialSet : public UObject
 
 public:
 
-	UCubiquityMaterialSet() = default;
+	UCubiquityMaterialSet(){} // IMC: removed '= default;' - Default constructor results in uninitialized data structure!
 	UCubiquityMaterialSet(const Cubiquity::MaterialSet& materialSet) : m_materialSet(materialSet) {}
 
 	UFUNCTION(BlueprintCallable, Category = "Cubiquity")
@@ -28,5 +28,6 @@ public:
 	operator Cubiquity::MaterialSet() const { return m_materialSet; }
 
 private:
+	friend class ACubiquityTerrainVolume;
 	Cubiquity::MaterialSet m_materialSet;
 };
