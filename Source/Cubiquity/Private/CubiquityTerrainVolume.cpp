@@ -11,7 +11,7 @@
 ACubiquityTerrainVolume::ACubiquityTerrainVolume(const FObjectInitializer& PCIP)
 	: Super(PCIP)
 {
-	volumeFileName = TEXT("G:/cubiquity/Data/VoxelDatabases/Version 0/SmoothVoxeliensTerrain.vdb");
+	volumeFileName = TEXT("D:/projects/cubiquity/cubiquity/Data/VoxelDatabases/Version 0/SmoothVoxeliensTerrain.vdb");
 }
 
 void ACubiquityTerrainVolume::PostActorCreated()
@@ -37,6 +37,7 @@ void ACubiquityTerrainVolume::Destroyed()
 
 void ACubiquityTerrainVolume::loadVolume()
 {
+	UE_LOG(CubiquityLog, Log, TEXT("ACubiquityTerrainVolume::loadVolume"));
 	m_volume = loadVolumeImpl<Cubiquity::TerrainVolume>();
 }
 

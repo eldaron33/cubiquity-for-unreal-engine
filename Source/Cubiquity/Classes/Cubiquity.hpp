@@ -361,6 +361,7 @@ namespace Cubiquity
 
 		TerrainVolume(const std::string& pathToExistingVoxelDatabase, WritePermissions writePermissions, uint32_t baseNodeSize)
 		{
+			UE_LOG(CubiquityLog, Log, TEXT("TerrainVolume::TerrainVolume from vdb"));
 			::validate(cuNewTerrainVolumeFromVDB(pathToExistingVoxelDatabase.c_str(), static_cast<uint32_t>(writePermissions), baseNodeSize, &m_volumeHandle));
 		}
 

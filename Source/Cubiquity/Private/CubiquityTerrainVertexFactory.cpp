@@ -32,8 +32,8 @@ FGeneratedMeshSceneProxy::FGeneratedMeshSceneProxy(UCubiquityMeshComponent* Comp
 	: FPrimitiveSceneProxy(Component)
 	, MaterialRelevance(Component->GetMaterialRelevance(ERHIFeatureLevel::SM4))
 {
-	//UE_LOG(CubiquityLog, Log, TEXT("Recreating proxy"));
-	//UE_LOG(CubiquityLog, Log, TEXT("Vertices in terrain proxy: %d"), Component->terrainVertices.Num());
+	UE_LOG(CubiquityLog, Log, TEXT("Recreating proxy"));
+	UE_LOG(CubiquityLog, Log, TEXT("Vertices in terrain proxy: %d"), Component->terrainVertices.Num());
 
 	//Copy the buffers in from the component
 	VertexBuffer.Vertices = Component->terrainVertices;

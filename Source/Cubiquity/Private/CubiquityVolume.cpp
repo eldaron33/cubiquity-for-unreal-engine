@@ -152,7 +152,7 @@ void ACubiquityVolume::PostEditChangeProperty(FPropertyChangedEvent & PropertyCh
 
 void ACubiquityVolume::createOctree()
 {
-	UE_LOG(CubiquityLog, Log, TEXT("ACubiquityColoredCubesVolume::loadVolume"));
+	UE_LOG(CubiquityLog, Log, TEXT("ACubiquityVolume::createOctree"));
 
 	if (volume()->hasRootOctreeNode())
 	{
