@@ -76,7 +76,7 @@ public:
 	//FShaderParameter LODParameter;
 };
 
-class FColoredCubesVertexFactory : public FVertexFactory
+class FColoredCubesVertexFactory : public FLocalVertexFactory
 {
 	DECLARE_VERTEX_FACTORY_TYPE(FColoredCubesVertexFactory);
 public:
@@ -84,7 +84,7 @@ public:
 	FColoredCubesVertexFactory()
 	{}
 
-	struct DataType //: public FVertexFactory::DataType
+	struct DataType : public FLocalVertexFactory::FDataType
 	{
 		FVertexStreamComponent PositionComponent;
 		FVertexStreamComponent ColorComponent;
@@ -125,7 +125,7 @@ public:
 
 	virtual void GetDynamicMeshElements(const TArray<const FSceneView*>& Views, const FSceneViewFamily& ViewFamily, uint32 VisibilityMap, FMeshElementCollector& Collector) const override;
 
-	virtual FPrimitiveViewRelevance GetViewRelevance(const FSceneView* View);
+	virtual FPrimitiveViewRelevance GetViewRelevance(const FSceneView* View) const override;
 
 	virtual bool CanBeOccluded() const override { return !MaterialRelevance.bDisableDepthTest; };
 
