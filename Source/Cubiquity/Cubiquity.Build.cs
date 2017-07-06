@@ -25,7 +25,7 @@ public class Cubiquity : ModuleRules
         get { return Path.Combine(ThirdPartyPath, "include"); }
     }
     
-    public Cubiquity(TargetInfo Target)
+    public Cubiquity(ReadOnlyTargetRules Target) : base(Target)
 	{
         MinFilesUsingPrecompiledHeaderOverride = 1;
         bFasterWithoutUnity = true;
@@ -34,7 +34,7 @@ public class Cubiquity : ModuleRules
         LoadCubiquity(Target);
 	}
 
-    public bool LoadCubiquity(TargetInfo Target)
+    public bool LoadCubiquity(ReadOnlyTargetRules Target)
     {
         bool isLibrarySupported = false;
 
