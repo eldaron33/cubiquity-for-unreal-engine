@@ -8,7 +8,7 @@
 
 void FGeneratedMeshVertexFactory::Init(const FGeneratedMeshVertexBuffer* VertexBuffer)
 {
-	check(!IsInRenderingThread());
+	//check(!IsInRenderingThread());
 
 	ENQUEUE_UNIQUE_RENDER_COMMAND_TWOPARAMETER(
 		InitGeneratedMeshVertexFactory,
